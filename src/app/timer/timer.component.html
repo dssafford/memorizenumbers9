@@ -1,0 +1,21 @@
+<section>
+    <form fxLayout="column" fxLayoutAlign="center center" fxLayoutGap="10px" #f="ngForm" (ngSubmit)="onSubmit(f)" >
+      <mat-form-field>
+        TimeDelay: <input matInput name="timeDelay" [(ngModel)]="timeDelay" value={{timeDelay}}/>
+      </mat-form-field>
+      <mat-form-field>
+        <input matInput name="chosenNumber" required [(ngModel)]="hey" #crapInput autofocus placeholder="dude" >
+        <mat-error *ngIf="chosenNumber.hasError('required')">Field must not be empty.</mat-error>
+      </mat-form-field>
+      <button type="submit" mat-raised-button color="primary" [disabled]="f.invalid">Submit</button>
+    </form>
+</section>
+<!--<span appBacon>sandwich!</span>-->
+<!--<div><input #someInput placeholder="Your favorite pizza toping"></div>-->
+
+
+<div fxLayout="row" fxLayoutAlign="center" class="my-container"><h1 *ngIf="isCounting" class="h1-big-red">
+  {{randomNumber}} </h1>
+  <h1 class="h1-big-blue"> &nbsp; of {{counter}}</h1></div>
+<!--<app-flex-stuff></app-flex-stuff>-->
+

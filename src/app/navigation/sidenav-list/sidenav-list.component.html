@@ -1,0 +1,40 @@
+<mat-nav-list>
+  <a mat-list-item routerLink="/quiz" (click)="onClose()">
+    <mat-icon>face</mat-icon>
+    <span class="nav-caption">Quiz</span>
+  </a>
+  <a mat-list-item routerLink="/quizzes" (click)="onClose()">
+    <mat-icon>input</mat-icon>
+    <span class="nav-caption">List</span>
+  </a>
+  <a mat-list-item routerLink="/learn" (click)="onClose()">
+    <mat-icon>input</mat-icon>
+    <span class="nav-caption">Learning</span>
+  </a>
+  <a mat-list-item routerLink="/home" (click)="onClose()">
+    <mat-icon>fitness_center</mat-icon>
+    <span class="nav-caption">Home</span>
+  </a>
+  <a mat-list-item routerLink="/flash-cards" (click)="onClose()">
+    <mat-icon>dns</mat-icon>
+    <span class="nav-caption">Flash Cards</span>
+  </a>
+  <a mat-list-item routerLink="/location" (click)="onClose()">
+    <mat-icon>card_travel</mat-icon>
+    <span class="nav-caption">Locations</span>
+  </a>
+  <a mat-list-item routerLink="/randomWords" (click)="onClose()">
+    <mat-icon>games</mat-icon>
+    <span class="nav-caption">Random Words</span>
+  </a>
+  <!--<a mat-list-item routerLink="/binding" (click)="onClose()">-->
+    <!--<mat-icon>speaker_notes_off</mat-icon>-->
+    <!--<span class="nav-caption">Binding</span>-->
+  <!--</a>-->
+  <mat-list-item>
+    <button mat-icon-button (click)="onClose()">
+      <mat-icon>eject</mat-icon>
+      <span class="nav-caption">Logout</span>
+    </button>
+  </mat-list-item>
+</mat-nav-list>
