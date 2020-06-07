@@ -47,6 +47,6 @@ export const  PRESIDENTS_DATA: HomeLocation[] = [
   {'number': 42, 'name': 'billclinton'},
   {'number': 43, 'name': 'georgewbush'},
   {'number': 44, 'name': 'barakobama'},
-  {'number': 45, 'name': 'donaldtrumo'},
+  {'number': 45, 'name': 'donaldtrump'},
 
 ];

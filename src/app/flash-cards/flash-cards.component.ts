@@ -2,6 +2,7 @@ import {Component, OnInit} from '@angular/core';
 import {TimerService} from '../service/timer.service';
 import {LORAYNE_LEARNING_DATA} from '../data/lorayneNumbers';
 import {BODY_LOCATION_DATA} from '../data/bodyNumbers';
+import {RWBODY_LOCATION_DATA} from '../data/rwbodyNumbers';
 
 import * as find from 'lodash/find';
 
@@ -16,6 +17,7 @@ import {CARD_DATA} from '../data/cards';
 import {HOUSE_BASEMENT1_DATA} from '../data/houseBasement1Numbers';
 import {PRESIDENTS_DATA} from '../data/presidents';
 import {RW20_LIST_DATA} from '../data/rw20List';
+import {IMAGES_DATA} from '../data/images1000';
 
 // import {catchError} from 'rxjs/internal/operators';
 
@@ -189,6 +191,10 @@ export class FlashCardsComponent implements OnInit {
         // console.log('in getNewQuestion - body');
         this.randomNumber = this.timerService.getRandomNumber(parseInt(this.txtFrom, 10), parseInt(this.txtTo, 10));
         this.answer = this.getAnswer(this.randomNumber);
+      } else if (this.selectedData === 'rwbody') {
+        // console.log('in getNewQuestion - rwbody');
+        this.randomNumber = this.timerService.getRandomNumber(parseInt(this.txtFrom, 10), parseInt(this.txtTo, 10));
+        this.answer = this.getAnswer(this.randomNumber);
       } else if (this.selectedData === 'cards') {
         // console.log('in getNewQuestion - cards');
         this.randomNumber = this.timerService.getRandomNumber(parseInt(this.txtFrom, 10), parseInt(this.txtTo, 10));
@@ -211,6 +217,9 @@ export class FlashCardsComponent implements OnInit {
         this.answer = this.getAnswer(this.randomNumber);
       } else if (this.selectedData === 'rw20List') {
         // console.log('in getNewQuestion - house');
+        this.randomNumber = this.timerService.getRandomNumber(parseInt(this.txtFrom, 10), parseInt(this.txtTo, 10));
+        this.answer = this.getAnswer(this.randomNumber);
+      } else if (this.selectedData === 'images1000') {
         this.randomNumber = this.timerService.getRandomNumber(parseInt(this.txtFrom, 10), parseInt(this.txtTo, 10));
         this.answer = this.getAnswer(this.randomNumber);
       } else {
@@ -300,6 +309,8 @@ export class FlashCardsComponent implements OnInit {
       return this.getLorayneResult(inputNumber);
     } else if (this.selectedData === 'body') {
       return this.getBodyResult(inputNumber);
+    } else if (this.selectedData === 'rwbody') {
+      return this.getRWBodyResult(inputNumber);
     } else if (this.selectedData === 'houseGroundFloor') {
       return this.getHouseGroundFloorResult(inputNumber);
     } else if (this.selectedData === 'houseBasement1') {
@@ -312,6 +323,8 @@ export class FlashCardsComponent implements OnInit {
       return this.getSunListResult(inputNumber);
     } else if (this.selectedData === 'rw20List') {
       return this.getRW20ListResult(inputNumber);
+    } else if (this.selectedData === 'images1000') {
+      return this.getImages1000Result(inputNumber);
     }
   }
 
@@ -334,6 +347,15 @@ export class FlashCardsComponent implements OnInit {
       return 'ERROR IN GetBodyResult';
     }
   }
+  getRWBodyResult(inputNumber: number) {
+    const q = find(RWBODY_LOCATION_DATA, {number: Number(inputNumber)});
+    if (q !== undefined) {
+      // console.log(q); // {name:'Dave',sex:male,age:34}
+      return q.name;
+    } else {
+      return 'ERROR IN GetRWBodyResult';
+    }
+  }
 getRW20ListResult(inputNumber: number) {
   const q = find(RW20_LIST_DATA, {number: Number(inputNumber)});
   if (q !== undefined) {
@@ -352,7 +374,15 @@ getRW20ListResult(inputNumber: number) {
       return 'ERROR IN GetSunListResult';
     }
   }
-
+  getImages1000Result(inputNumber: number) {
+    const q = find(IMAGES_DATA, {number: Number(inputNumber)});
+    if (q !== undefined) {
+      console.log(q); // {name:'Dave',sex:male,age:34}
+      return q.name;
+    } else {
+      return 'ERROR IN GetImages1000Result';
+    }
+  }
   getHouseGroundFloorResult(inputNumber: number) {
     const q = find(HOUSE_GROUND_FLOOR_DATA, {number: Number(inputNumber)});
     if (q !== undefined) {

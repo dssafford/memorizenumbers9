@@ -48,6 +48,7 @@ import {MatInputModule} from '@angular/material/input';
 
 import { LocationTabComponent } from './location-tab/location-tab.component';
 import { LocationBodyComponent } from './location-body/location-body.component';
+import { RWLocationBodyComponent } from './rwlocation-body/rwlocation-body.component';
 import { LocationCarComponent } from './location-car/location-car.component';
 import { LocationCardsComponent } from './location-cards/location-cards.component';
 import { LocationHouseComponent } from './location-house/location-house.component';
@@ -63,6 +64,7 @@ import { RunTestComponent } from './run-test/run-test.component';
 import { LocationPresidentsComponent } from './location-presidents/location-presidents.component';
 import { Familyroom25Component } from './familyroom25/familyroom25.component';
 import { Fourseasonroom20Component } from './fourseasonroom20/fourseasonroom20.component';
+import { Images1000Component } from './location-images1000/location-images1000.component';
 
 
 
@@ -76,13 +78,14 @@ import { Fourseasonroom20Component } from './fourseasonroom20/fourseasonroom20.c
     SortTableComponent, TablePaginationComponent, LearnListComponent,
     LorayneListComponent,
     LearningComponent, CssComponent, QuizDetailsComponent, AnswerShowComponent, LocationTabComponent, LocationBodyComponent,
-    LocationCarComponent, LocationCardsComponent, LocationHouseComponent, FlashCardsComponent, LocationSunListComponent,
+    RWLocationBodyComponent, LocationCarComponent, LocationCardsComponent, LocationHouseComponent, FlashCardsComponent, LocationSunListComponent,
     DougMsgDialogComponent, WordTimerComponent, AnswerShowWordComponent, AnswerWordComponent, LocationRW20ListComponent,
     RandomWordQuizComponent,
     RunTestComponent,
     LocationPresidentsComponent,
     Familyroom25Component,
     Fourseasonroom20Component,
+    Images1000Component,
   ],
   imports: [
     BrowserModule, BrowserAnimationsModule, HttpClientModule,

@@ -46,8 +46,8 @@ import {MYNUMBER} from '../lorayne-list/lorayne-list.component';
 
 
 export const  PI_100: MYNUMBER[] = [
-  {'number': 0, 'name' : 'zoo'},
-  {'number': 1, 'name' : 'tie'},
+  {number: 0, name : 'zoo'},
+  {'number': 1, name : 'tie'},
   {'number': 2, 'name': 'noah'},
   {'number': 3, 'name': 'ma'},
   {'number': 4, 'name': 'rye'},
